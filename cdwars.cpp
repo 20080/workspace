@@ -45,7 +45,7 @@ int solve() {
 	carry = answerlower[0];
 	answerlower = answerlower.substr(1, answerlower.size());
 
-	if (carry > 0);
+	if (back > 0);
 	HigherA = to_string(stoll(HigherA) + carry);
 
 	answerHigher = to_string(stoll(HigherA) + stoll(HigherB));
@@ -55,4 +55,35 @@ int solve() {
 
 	return 0;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var total = 0
+for (var i = myArray.length - 1; i <= 0; i--) {
+	total += myArray[i];
 }

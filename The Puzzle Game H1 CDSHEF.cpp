@@ -56,7 +56,11 @@ int swaping(int number, int position1, int position2) {
 }
 
 
-int solve
+int solve() {
+	int k;
+
+	queue<PII>q;
+}
 
 
 int main() {

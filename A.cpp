@@ -6,27 +6,19 @@ using namespace std;
 
 bool solve() {
 	ll lo;
-	cin >> lo;
+	scanf("%Ld", &lo);
 
-	if (lo % 2 == 0)
-		return false;
-	ll ans = sqrt(lo);
-	if (ans * ans == lo)
-	{
-		if (lo % 2 != 0)
-			return true;
-		else
-			return false;
-	}
+	while (lo % 2 == 0)
+		lo /= 2;
 
-	return true;
+	return lo > 1;
 }
 
 
 
 int main() {
 
-	// freopen("input.txt", "r", stdin);
+	freopen("input.txt", "r", stdin);
 	// freopen("output.txt", "w", stdout);
 
 	int test;

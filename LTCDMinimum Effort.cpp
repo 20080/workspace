@@ -4,6 +4,12 @@ using namespace std;
 
 // int dir[4][3] = {{1, 0, 2}, {0, 1, 3}, { -1, 0, 4}, {0, -1, 5}};
 
+long long power(int n, int m) {
+	if (m == 0)
+		return 1;
+	return n * power(n, m - 1);
+}
+
 
 string re(int val) {
 
@@ -12,9 +18,7 @@ string re(int val) {
 
 
 	return val % 2 == 0 ? re(val / 2) + "0" : re(val / 2) + "1";
-
 }
-
 
 
 
@@ -30,27 +34,21 @@ int bfs(int val) {
 	}
 
 	reverse(s.begin(), s.end());
-
-	// string s = "1101110010111011110001001101010111100";
-	// cout << s;
 	long long ans = 0;
-	string temp = s;
-	int base = 1;
-	while (temp.length() - 1 >= 0) {
-		int last_digit = stoi(to_string(temp[0]));
-		if (temp.length() >= 1)
-			temp = temp.substr(1, temp.length());
-		// cout << temp << endl;
-		ans += last_digit * base;
 
-		base = base * 2;
+	for (int i = s.length() - 1; i > 0; i--) {
+
+		if (s[i] == '1') {
+			ans += power(2, i) % 1000000007;
+
+			// ans = ans % 1000000007;
+		}
 	}
 
-	// cout << s;
 
-	ans = ans % 1000000007;
+	// ans = ans % 1000000007;
 
-	return ans;
+	return (int)ans;
 }
 
 int minimumEffortPath(vector<vector<int>>& h) {
@@ -116,6 +114,8 @@ int main() {
 
 	// freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-	cout << bfs(3) << endl;
+	cout << bfs(42) << endl;
+	// cout << power(2, 42);
+	// cout << value("11011", 4);
 
 }

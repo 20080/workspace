@@ -10,19 +10,23 @@ int solve(vector<vector<int>> grid, int k) {
 	int m = grid.size(), n = grid[0].size();
 	queue<vector<int>>q({{0, 0, k, 0}});
 	int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, { -1, 0}};
+	vector<vector<int>>seen(m, vector<int>(n, -1));
 
 	while (!q.empty()) {
 		auto val = q.front();
 		q.pop();
 		int x = val[0], y = val[1], curK = val[2], step = val[3];
+
 		if (x == m - 1 && y == n - 1)
 			return step;
 		for (auto d : dir) {
 			int nx = x + d[0], ny = y + d[1];
+
 			if (nx >= 0 && ny >= 0 && nx < m && ny < n) {
 				int nk = curK - grid[nx][ny];
-				if (nk > -1) {
-					q.push({nk, ny, nk, step + 1});
+				if (nk > seen[nx][ny]) {//if not using array then just check for the nk>-1
+					q.push({nx, ny, nk, step + 1});
+					seen[nx][ny] = nk;
 				}
 
 			}

@@ -37,10 +37,15 @@ int main() {										//507544127  193864606
 	freopen("output.txt", "w", stdout);
 	//#endif
 //take input of matrix here
-	cout << (int)'0';//call funtion name to it;
+	//cout << (int)'0';//call funtion name to it;
+	long long a = 16;
+	int b = 20;
+	for (int i = 0; i <= a * 10; i = i + a)
+	{	if (i == 0)
+			continue;
+		cout << i << endl;
+	}
 
 }
-
-
-
-
+a = 50
+    a + b

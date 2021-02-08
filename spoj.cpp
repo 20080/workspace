@@ -1,9 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#include<bits/stdc++.h>
-using namespace std;
-
 //Function to return precedence of operators
 int prec(char c)
 {

@@ -7,25 +7,16 @@ int main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 
-	vector<int> v (8, 0) = {2, 3,};
-	for (int i = 0; i < m; ++i)
-	{
-
-	}
-
-	cout << solve(v, 2) << endl;
-}
+	string s = "";
+	cin >> s;
 
 
+	map<string, int> m;
 
-for (int i = 0; i < 1000; i++) {
-	for (int j = i; j < 1000; j++) {
-		if (num[i] == 0 || j == i)
-			continue;
+	for (int i = 0; i < s.length(); i++) {
+		for (int j = 0; j < s.length(); j++) {
 
-		else {
-			if (nums[i] != nums[j] && abs(nums[i] - nums[j]) > 1)
-				return "NO";
 		}
 	}
+
 }

@@ -20,22 +20,10 @@ int main() {
 			for (int i = 0; i < l - k; i++) {
 				j = k + i;
 				ss = ss + s[j];
-				sn = ss ;
-				sort(sn.begin() , sn.end());
-				mp[sn]++;
+				cout << ss << " " << l - k << endl;
 			}
 		}
-		long long int ans = 0 ;
-		map<string, int> :: iterator it ;
-		for (it = mp.begin() ; it != mp.end() ; it++) {
-			cout << it->first << " " << it->second << endl;
 
-			long long  vl = (long long)(it->second) ;
-			if (vl > 1) {
-				ans += (vl * (vl - 1)) / 2LL ;
-			}
-		}
-		cout << ans << endl;
 
 	}
 	return 0;

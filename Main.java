@@ -1,26 +1,12 @@
 import java.util.*;
 
+static enum Theme = {light, dark, rose, violet};
+
 class Main {
-	public static void main(String args[] ) throws Exception {
+	public static void main(String args[] )  {
 
-		new1 n = new new1();
-
-		n.display();
-
+		System.out.print("H");
 
 	}
 
-}
-
-class news {
-	public void display() {
-		System.out.print("Main");
-	}
-}
-
-class new1 extends news {
-	public void display() {
-		super.display();
-		System.out.print("Sub");
-	}
 }

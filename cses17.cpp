@@ -44,8 +44,6 @@ int main() {
 			cin >> a[i][j];
 		}
 	}
-
-
 	solution(0);
 	cout << countt;
 	return 0;

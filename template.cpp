@@ -2,7 +2,12 @@
 using namespace std;
 #define ll long long
 #define vec vector<int>
+#define print(x) cout<<x
+#define input(x) cin>>x
 void solve() {
+	int y, z;
+	input(y >> z);
+	print("Suraj Thakur" << " Suraj" << y << z);
 
 }
 
@@ -14,9 +19,5 @@ int main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 #endif
-
-	int test;
-	cin >> test;
-	while (test--)
-		solve();
+	solve();
 }
